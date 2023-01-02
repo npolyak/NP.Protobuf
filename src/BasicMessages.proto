@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/type.proto";
+
+package broadcasting;
+
+message ShortMsg
+{    
+	google.protobuf.Timestamp msgSentTime = 1;
+
+	google.protobuf.EnumValue topic = 3;
+
+	string errorMessage = 4;
+}
+
+message FullMsg
+{
+	ShortMsg metadata = 1;
+
+	google.protobuf.Any message = 2;
+}
