@@ -5,7 +5,7 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/any.proto";
 import "google/protobuf/type.proto";
 
-package broadcasting;
+package nP.protobuf;
 
 message ShortMsg
 {    
