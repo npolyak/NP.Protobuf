@@ -25,9 +25,9 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
-
+	
 	<ItemGroup>
-	  <ProjectReference Include="$(SolutionDir)..\..\SubModules\NP.Utilities\src\NP.Utilities.csproj" />
+	  <ProjectReference Include="..\..\NP.Utilities\src\NP.Utilities.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
