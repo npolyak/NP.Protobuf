@@ -2,12 +2,16 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
+		<Version>1.0.4</Version>
 		<PackageId>NP.Protobuf</PackageId>
 		<Company>AWebPros</Company>
-		<Description>Contains utilities related to protobuf</Description>
+		<Description>basic protobuf utilities and messages</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<Copyright>Nick Polyak, 2023</Copyright>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageTags>Protobuf, Proto, gRPC</PackageTags>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<DebugType>none</DebugType>
@@ -27,8 +31,12 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
-	
-	<ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'=='Debug'">
 	  <ProjectReference Include="..\..\NP.Utilities\src\NP.Utilities.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'=='Release'">
+		<PackageReference Include="NP.Utilities" Version="1.0.19" />
 	</ItemGroup>
 </Project>
