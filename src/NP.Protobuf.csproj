@@ -1,14 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<Version>1.0.4</Version>
+		<Version>1.0.5</Version>
 		<PackageId>NP.Protobuf</PackageId>
 		<Company>AWebPros</Company>
 		<Description>basic protobuf utilities and messages</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
 		<Copyright>Nick Polyak, 2023</Copyright>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageTags>Protobuf, Proto, gRPC</PackageTags>
@@ -25,11 +23,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Google.Protobuf" Version="3.21.12" />
-		<PackageReference Include="Grpc.Tools" Version="2.51.0">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
+		<PackageReference Include="Google.Protobuf" Version="3.26.1" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(Configuration)'=='Debug'">
@@ -37,6 +31,6 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(Configuration)'=='Release'">
-		<PackageReference Include="NP.Utilities" Version="1.0.19" />
+		<PackageReference Include="NP.Utilities" Version="1.0.23" />
 	</ItemGroup>
 </Project>

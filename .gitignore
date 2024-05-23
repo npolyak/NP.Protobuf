@@ -7,3 +7,4 @@
 *.nuspec~
 *.nupkg
 /src/bin/Release/net6.0
+/src/bin
